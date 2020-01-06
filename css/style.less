@@ -1,0 +1,27 @@
+@import "vars.less";
+
+html {
+  font-size: 15px;
+  /* после этого 1rem = 15px */
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: @black;
+}
+
+*,
+*:before,
+*:after {
+  /* все размеры изменяются внутри блоков (пэддинги, мэрджины) */
+  box-sizing: border-box;
+}
+
+/* blocks */
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/user";
+@import "blocks/nav";
