@@ -8,6 +8,14 @@ body {
   font-size: 1rem;
   color: #2B2A2C;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 *,
 *:before,
 *:after {
@@ -56,19 +64,68 @@ body {
 .nav {
   display: flex;
   height: 100%;
+  align-items: center;
 }
 .nav__link {
+  position: relative;
   font-size: 0.93rem;
   color: #2B2A2C;
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  border: 2px solid transparent;
-  border-radius: 20px;
+  margin-left: 2rem;
+}
+.nav__link:after {
+  content: "";
+  width: 0;
+  height: 0.13rem;
+  background-color: #2B2A2C;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  z-index: 1;
+  transition: width 0.3s linear;
+}
+.nav__link:hover:not(.nav__link--btn):after {
+  width: 100%;
+}
+.nav__link--btn {
   padding: 0.66rem 2rem;
+  border: 2px solid #2B2A2C;
+  border-radius: 20px;
+  transition: color 0.3s linear, background-color 0.3s linear;
 }
-.nav__link:hover,
-.nav__link.active {
-  border-color: #2B2A2C;
+.nav__link--btn:hover {
+  background-color: #2B2A2C;
+  color: #fff;
 }
+.intro__inner {
+  display: flex;
+  border-bottom: 1px solid rgba(106, 105, 107, 0.3);
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+.intro__content {
+  width: 50%;
+}
+.intro__subtitle {
+  font-weight: 200;
+  font-size: 2.13rem;
+  color: #2B2A2C;
+}
+.intro__title {
+  margin-bottom: 5px;
+  font-size: 3rem;
+  color: #2B2A2C;
+  font-weight: 700;
+}
+.intro__text {
+  font-size: 1.2rem;
+  color: rgba(43, 42, 44, 0.7);
+}
+.intro__photo {
+  width: 50%;
+}
+/* остановился на 20-20 */
+/* https://www.youtube.com/watch?v=CXRHPR3yDTM */
 /*# sourceMappingURL=style.css.map */

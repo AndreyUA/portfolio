@@ -1,22 +1,47 @@
 .nav {
   display: flex;
   height: 100%;
+  align-items: center;
 }
 
 .nav__link {
+  position: relative;
   font-size: 0.93rem;
   color: @black;
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
 
-  border: 2px solid transparent;
-  border-radius: 20px;
+  margin-left: 2rem;
 
-  padding: 0.66rem 2rem;
+  &:after {
+    content: "";
+    width: 0;
+    height: 0.13rem;
+    background-color: @black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 1;
 
-  &:hover,
-  &.active{
-    border-color: @black;
+    transition: width 0.3s linear;
+  }
+
+  &:hover:not(.nav__link--btn) {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &--btn {
+    padding: 0.66rem 2rem;
+    border: 2px solid @black;
+    border-radius: 20px;
+    transition: color 0.3s linear, background-color 0.3s linear;
+
+    &:hover {
+      background-color: @black;
+      color: @white;
+    }
   }
 }
