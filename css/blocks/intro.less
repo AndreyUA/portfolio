@@ -3,10 +3,12 @@
 }
 
 .intro__inner {
+  position: relative;
   display: flex;
   border-bottom: 1px solid fade(@grey, 30%);
   padding-top: 100px;
   padding-bottom: 120px;
+  //background: url("../images/designer_photo.png") right bottom no-repeat;
 }
 
 .intro__content {
@@ -27,17 +29,15 @@
 }
 
 .intro__text {
+  margin-bottom: 25px;
   font-size: 1.2rem;
   color: fade(@black, 70%);
 }
 
 .intro__photo {
-  width: 50%;
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  z-index: 1;
 }
-
-
-
-/* остановился на 20-20 */
-/* https://www.youtube.com/watch?v=CXRHPR3yDTM */
-
 
