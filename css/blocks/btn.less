@@ -20,7 +20,7 @@
 
   cursor: pointer;
 
-  transition: background-color 0.3s linear, color 0.3s linear, box-shadow 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear, box-shadow 0.3s linear, border-color 0.3s linear;
 
     &:focus {
     outline: none;
@@ -29,6 +29,7 @@
   &:hover {
     background-color: @black;
     color: @white;
+    border-color: @black;
 
     /* SHADOW */
     /* черная, прозрачность 24%, сдвиг по оси Х - 2пх, сдвиг по оси У - 2пх, размытие - 10пх */
