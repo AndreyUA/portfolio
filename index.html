@@ -368,7 +368,7 @@
 
 
     <!-- MODALS -->
-    <div class="modal">
+    <div class="modal" style="display: none;">
         <div class="modal__dialog">
 
             <button class="modal__close" type="button">
@@ -394,18 +394,195 @@
                     </div>
 
                     <div class="modal-work__text">
+
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa magnam magni perspiciatis reprehenderit veniam! Aspernatur atque maxime provident! Deleniti doloribus expedita nemo perspiciatis placeat quia quos vel velit, veritatis.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aperiam asperiores at commodi cum eos harum id necessitatibus nisi odit quaerat tenetur velit. Incidunt inventore maxime molestiae nihil quo sapiente?</p>
+
                     </div>
 
                     <div class="modal-work__footer">
-                        <button>Previous</button>
-                        <button>Next</button>
+                        <button class="modal-work__btn modal-work__btn--prev" type="button">
+                            <img src="images/back.svg" height="11px" alt="back">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn modal-work__btn--next" type="button">
+                            Next
+                            <img src="images/next.svg" height="11px" alt="next">
+                        </button>
                     </div>
 
                 </div> <!-- modal-work__content -->
 
             </div> <!-- modal-work -->
+
+        </div> <!-- modal__dialog -->
+    </div> <!-- modal -->
+
+
+    <div class="modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button">
+                <img src="images/close.svg" alt="close">
+            </button>
+
+            <div class="modal__content">
+                <h3 class="modal__title">resume</h3>
+
+                <div class="text-center">
+                    <a class="btn btn--thin" href="#">download pdf</a>
+                    <a class="btn btn--thin" href="#">print</a>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline__col timeline__col--left text-right">
+                        <h4 class="timeline__title">experience</h4>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="07-22-2018">2018 - <b>Present</b></time>
+                            <h5 class="timeline__subtitle">Freelancer</h5>
+                            <div class="timeline__position">
+                                Art Director
+                            </div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum fugit hic illo impedit itaque, iusto laboriosam, magni nihil nulla odio porro quas rerum. Est excepturi facere iusto similique voluptatibus?</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="07-22-2018">2016 - 2018</time>
+                            <h5 class="timeline__subtitle">The Best Agency</h5>
+                            <div class="timeline__position">
+                                Art Director
+                            </div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum fugit hic illo impedit itaque, iusto laboriosam, magni nihil nulla odio porro quas rerum. Est excepturi facere iusto similique voluptatibus?</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="07-22-2018">2014 - 2016</time>
+                            <h5 class="timeline__subtitle">Better Agency</h5>
+                            <div class="timeline__position">
+                                UI/UX Designer
+                            </div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum fugit hic illo impedit itaque, iusto laboriosam, magni nihil nulla odio porro quas rerum. Est excepturi facere iusto similique voluptatibus?</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="07-22-2018">2012 - 2014</time>
+                            <h5 class="timeline__subtitle">Good Agency</h5>
+                            <div class="timeline__position">
+                                UI/UX Designer
+                            </div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum fugit hic illo impedit itaque, iusto laboriosam, magni nihil nulla odio porro quas rerum. Est excepturi facere iusto similique voluptatibus?</p>
+                            </div>
+                        </div>
+
+                    </div> <!-- timeline__col--left -->
+                    <div class="timeline__col timeline__col--right">
+                        <h4 class="timeline__title">education</h4>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="07-22-2018">2005 - 2010</time>
+                            <h5 class="timeline__subtitle">UI/UX Designer</h5>
+                            <div class="timeline__position">
+                                Open University
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="07-22-2018">2002 - 2005</time>
+                            <h5 class="timeline__subtitle">Illustrator</h5>
+                            <div class="timeline__position">
+                                School
+                            </div>
+                        </div>
+
+                        <h4 class="timeline__title">skills</h4>
+                        <div class="progress-bar">
+
+                            <!-- тут ошибка в позиционировании. надо разобраться потом в конце -->
+
+                            <div class="progress-bar__item">
+
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">UI/UX Design</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__item">
+
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Illustrator</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__item">
+
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Photoshop</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__item">
+
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Sketch</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- progress-bar -->
+
+                        <h4 class="timeline__title">awards</h4>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="07-22-2018">2018</b></time>
+                            <h5 class="timeline__subtitle">UI/US Design</h5>
+                            <div class="timeline__position">
+                                Art Director
+                            </div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum fugit hic illo impedit itaque, iusto laboriosam, magni nihil nulla odio porro quas rerum. Est excepturi facere iusto similique voluptatibus?</p>
+                            </div>
+                        </div>
+
+
+
+                    </div> <!-- timeline__col--right -->
+                </div> <!-- timeline -->
+
+                <div class="text-center">
+                    <a href="#" class="btn">hire me</a>
+                </div>
+
+
+            </div> <!-- modal__content -->
+
+
 
         </div> <!-- modal__dialog -->
     </div> <!-- modal -->
