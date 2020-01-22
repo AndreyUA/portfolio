@@ -518,6 +518,9 @@ p {
   margin: auto;
   background-color: #fff;
 }
+.modal__dialog--sm {
+  max-width: 900px;
+}
 .modal__close {
   padding: 0;
   background: none;
@@ -544,8 +547,14 @@ p {
   font-size: 3rem;
   color: #2B2A2C;
   font-weight: 700;
-  text-align: center;
   margin-bottom: 3.6rem;
+}
+/*------------------------------------------------------*/
+.modal_subtitle {
+  text-transform: uppercase;
+  font-size: 1.06rem;
+  color: #2B2A2C;
+  font-weight: 400;
 }
 .modal-work {
   display: flex;
@@ -717,13 +726,86 @@ p {
   font-weight: 300;
   font-size: 0.94rem;
 }
+.contact {
+  display: flex;
+  background: url("https://placehold.it/480x700") right center no-repeat;
+}
+.contact__left {
+  width: 47%;
+  padding: 2rem;
+}
+.contact__info {
+  margin: 2rem 0 3rem 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.94rem;
+  color: #2B2A2C;
+  font-weight: 300;
+}
+.contact__info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.contact__info li:last-child {
+  margin-bottom: 0;
+}
+.contact__info-icon {
+  margin-right: 0.75rem;
+}
+.form__group {
+  margin-bottom: 1.8rem;
+}
+.form__label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2B2A2C;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+.form__input,
+.form__textarea {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 1.8rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+  color: #2B2A2C;
+  border: 1px solid rgba(112, 112, 112, 0.3);
+  border-radius: 1.8rem;
+  transition: border-color 0.3s linear;
+}
+.form__input:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: crimson;
+}
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: #2B2A2C;
+}
+.form__textarea {
+  height: 200px;
+  resize: none;
+}
 /* helpers */
 .text-center {
   text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
 }
 .img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+.mb-0 {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
