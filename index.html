@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200, 300,400,400i,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -81,19 +82,18 @@
         <div class="container">
 
             <div class="works__nav">
-                <a class="works__nav-link" href="#">All</a>
-                <a class="works__nav-link" href="#">App</a>
-                <a class="works__nav-link" href="#">Websites</a>
-                <a class="works__nav-link" href="#">Interaction</a>
+                <a class="works__nav-link" href="#" data-filter="all">All</a>
+                <a class="works__nav-link" href="#" data-filter="app">App</a>
+                <a class="works__nav-link" href="#" data-filter="website">Websites</a>
+                <a class="works__nav-link" href="#" data-filter="interaction">Interaction</a>
             </div>
 
-            <div class="portfolio">
-                <!-- first begin -->
-                <div class="portfolio__col">
+            <div class="portfolio" id="portfolio">
+                <div class="portfolio__col" data-cat="app">
                     <div class="work">
                         <img class="work__image" src="images/works/mogo.png" alt="">
                         <div class="work__content">
-                            <div class="work__cat">Category</div>
+                            <div class="work__cat">category: app</div>
                             <div class="work__title">
                                 Project title
                                 <time class="work__date" datetime="2019-12-8">2019</time>
@@ -101,14 +101,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- first end -->
 
-                <!-- first begin -->
-                <div class="portfolio__col">
+                <div class="portfolio__col" data-cat="website">
                     <div class="work">
                         <img class="work__image" src="images/works/mogo.png" alt="">
                         <div class="work__content">
-                            <div class="work__cat">Category</div>
+                            <div class="work__cat">category: website</div>
                             <div class="work__title">
                                 Project title
                                 <time class="work__date" datetime="2019-12-8">2019</time>
@@ -116,14 +114,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- first end -->
 
-                <!-- first begin -->
-                <div class="portfolio__col">
+                <div class="portfolio__col" data-cat="interaction">
                     <div class="work">
                         <img class="work__image" src="images/works/mogo.png" alt="">
                         <div class="work__content">
-                            <div class="work__cat">Category</div>
+                            <div class="work__cat">category: interaction</div>
                             <div class="work__title">
                                 Project title
                                 <time class="work__date" datetime="2019-12-8">2019</time>
@@ -131,14 +127,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- first end -->
 
-                <!-- first begin -->
-                <div class="portfolio__col">
+                <div class="portfolio__col" data-cat="website">
                     <div class="work">
                         <img class="work__image" src="images/works/mogo.png" alt="">
                         <div class="work__content">
-                            <div class="work__cat">Category</div>
+                            <div class="work__cat">category: website</div>
                             <div class="work__title">
                                 Project title
                                 <time class="work__date" datetime="2019-12-8">2019</time>
@@ -146,14 +140,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- first end -->
 
-                <!-- first begin -->
-                <div class="portfolio__col">
+                <div class="portfolio__col" data-cat="interaction">
                     <div class="work">
                         <img class="work__image" src="images/works/mogo.png" alt="">
                         <div class="work__content">
-                            <div class="work__cat">Category</div>
+                            <div class="work__cat">category: interaction</div>
                             <div class="work__title">
                                 Project title
                                 <time class="work__date" datetime="2019-12-8">2019</time>
@@ -161,14 +153,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- first end -->
 
-                <!-- first begin -->
-                <div class="portfolio__col">
+                <div class="portfolio__col" data-cat="app">
                     <div class="work">
                         <img class="work__image" src="images/works/mogo.png" alt="">
                         <div class="work__content">
-                            <div class="work__cat">Category</div>
+                            <div class="work__cat">category: app</div>
                             <div class="work__title">
                                 Project title
                                 <time class="work__date" datetime="2019-12-8">2019</time>
@@ -176,7 +166,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- first end -->
             </div> <!-- portfolio -->
 
             <div class="text-center">
@@ -636,6 +625,10 @@
 
         </div> <!-- modal__dialog -->
     </div> <!-- modal -->
+
+    <!-- JS -->
+    <script src="JS/main.js"></script>
+
 </body>
 </html>
 
