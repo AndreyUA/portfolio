@@ -1,5 +1,5 @@
 .modal {
-  display: flex;
+  display: none;
 
   width: 100%;
   height: 100%;
@@ -17,6 +17,10 @@
 
   /* для прокрутки */
   overflow: auto;
+
+  &.show {
+    display: flex;
+  }
 }
 
 .modal__dialog {
@@ -28,6 +32,10 @@
   margin: auto;
 
   background-color: @white;
+
+  transform: rotateX(90deg);
+
+  transition: transform 0.3s linear;
 
   &--sm {
     max-width: 900px;
