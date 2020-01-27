@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="portfolio__col" data-cat="website">
-                    <div class="work">
+                    <div class="work" data-modal="#modal_project_2">
                         <img class="work__image" src="images/works/mogo.png" alt="">
                         <div class="work__content">
                             <div class="work__cat">category: website</div>
@@ -367,11 +367,20 @@
             <div class="modal-work">
 
                 <div class="modal-work__preview">
-                    <img class="modal-work__photo" src="http://placehold.it/790x780" alt="">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="http://placehold.it/790x780" alt="">
+                        </div>
+
+                        <div>
+                            <img class="modal-work__photo" src="http://placehold.it/790x780/333" alt="">
+                        </div>
+
+                    </div>
                 </div>
                 <div class="modal-work__content">
                     <div class="modal-work__header">
-                        <h3 class="modal-work__title">Project title</h3>
+                        <h3 class="modal-work__title">Project title 1</h3>
                         <div class="modal-work__info">
                             category <span class="modal-work__info-divider">|</span> 2019
                         </div>
@@ -390,11 +399,72 @@
                     </div>
 
                     <div class="modal-work__footer">
-                        <button class="modal-work__btn modal-work__btn--prev" type="button">
+                        <button class="modal-work__btn slickPrev modal-work__btn--prev" type="button">
                             <img src="images/back.svg" height="11px" alt="back">
                             Previous
                         </button>
-                        <button class="modal-work__btn modal-work__btn--next" type="button">
+                        <button class="modal-work__btn slickNext modal-work__btn--next" type="button">
+                            Next
+                            <img src="images/next.svg" height="11px" alt="next">
+                        </button>
+                    </div>
+
+                </div> <!-- modal-work__content -->
+
+            </div> <!-- modal-work -->
+
+        </div> <!-- modal__dialog -->
+    </div> <!-- modal -->
+
+
+
+    <div id="modal_project_2" class="modal">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/close.svg" alt="close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="http://placehold.it/790x780" alt="">
+                        </div>
+
+                        <div>
+                            <img class="modal-work__photo" src="http://placehold.it/790x780/333" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Project title 2</h3>
+                        <div class="modal-work__info">
+                            category <span class="modal-work__info-divider">|</span> 2019
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__client-title">Client:</div>
+                        <div class="modal-work__client-company">Creative Agency</div>
+                    </div>
+
+                    <div class="modal-work__text">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium culpa magnam magni perspiciatis reprehenderit veniam! Aspernatur atque maxime provident! Deleniti doloribus expedita nemo perspiciatis placeat quia quos vel velit, veritatis.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aperiam asperiores at commodi cum eos harum id necessitatibus nisi odit quaerat tenetur velit. Incidunt inventore maxime molestiae nihil quo sapiente?</p>
+
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev modal-work__btn--prev" type="button">
+                            <img src="images/back.svg" height="11px" alt="back">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn slickNext modal-work__btn--next" type="button">
                             Next
                             <img src="images/next.svg" height="11px" alt="next">
                         </button>
@@ -626,6 +696,7 @@
     </div> <!-- modal -->
 
     <!-- JS -->
+    <script src="JS/slick.min.js"></script>
     <script src="JS/main.js"></script>
 
 </body>

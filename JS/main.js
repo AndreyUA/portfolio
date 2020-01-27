@@ -3,6 +3,7 @@ $(function () {
     // filter
 
     const filer = $('[data-filter]');
+    const worksSlider = $('[data-slider="slick"]');
 
     filer.on('click', function (e) {
         e.preventDefault();
@@ -42,6 +43,8 @@ $(function () {
             });
         }, 300);
 
+        worksSlider.slick('setPosition');
+
     });
 
     modalClose.on('click', function (e) {
@@ -77,6 +80,33 @@ $(function () {
 
     $('.modal__dialog').on('click', function (e) {
         e.stopPropagation();
+    });
+
+    /* Slider slick.js */
+
+    worksSlider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true
+    });
+
+    $('.slickPrev').on('click', function (e) {
+        e.preventDefault();
+
+        const currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+
+        currentSlider.slick('slickPrev');
+    });
+
+    $('.slickNext').on('click', function (e) {
+        e.preventDefault();
+
+        const currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
+
+        currentSlider.slick('slickNext');
     });
 
 });
