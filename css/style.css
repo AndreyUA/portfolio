@@ -206,6 +206,11 @@ p {
   height: 100%;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
 .nav__link {
   position: relative;
   font-size: 0.93rem;
@@ -243,8 +248,14 @@ p {
   position: relative;
   display: flex;
   border-bottom: 1px solid rgba(106, 105, 107, 0.3);
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 6.6rem;
+  padding-bottom: 8rem;
+}
+@media (max-width: 991px) {
+  .intro__inner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 .intro__content {
   width: 50%;
@@ -254,11 +265,21 @@ p {
   font-size: 2.13rem;
   color: #2B2A2C;
 }
+@media (max-width: 991px) {
+  .intro__subtitle {
+    font-size: 1.5rem;
+  }
+}
 .intro__title {
   margin-bottom: 5px;
   font-size: 3rem;
   color: #2B2A2C;
   font-weight: 700;
+}
+@media (max-width: 991px) {
+  .intro__title {
+    font-size: 2rem;
+  }
 }
 .intro__text {
   margin-bottom: 25px;
@@ -270,6 +291,11 @@ p {
   bottom: -1px;
   right: 0;
   z-index: 1;
+}
+@media (max-width: 991px) {
+  .intro__photo {
+    width: 350px;
+  }
 }
 .social {
   display: flex;
@@ -327,6 +353,13 @@ p {
   min-width: 145px;
   font-size: 0.8rem;
 }
+@media (max-width: 991px) {
+  .btn {
+    font-size: 1rem;
+    padding: 1em 1.5em;
+    min-width: 140px;
+  }
+}
 .works {
   margin: 3.8rem 0;
 }
@@ -350,9 +383,20 @@ p {
   margin: 0 -1rem 2.8rem -1rem;
 }
 .portfolio__col {
-  width: 33.3333333%;
+  flex-basis: 33.3333333%;
   padding: 1rem;
 }
+@media (max-width: 767px) {
+  .portfolio__col {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 565px) {
+  .portfolio__col {
+    flex-basis: 100%;
+  }
+}
+/* 15 min */
 .work {
   overflow: hidden;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -929,6 +973,21 @@ p {
 .form__textarea {
   height: 200px;
   resize: none;
+}
+.burger {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+}
+.burger__icon {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* helpers */
 .text-center {

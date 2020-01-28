@@ -1,14 +1,14 @@
-.intro {
-
-}
-
 .intro__inner {
   position: relative;
   display: flex;
   border-bottom: 1px solid fade(@grey, 30%);
-  padding-top: 100px;
-  padding-bottom: 120px;
-  //background: url("../images/designer_photo.png") right bottom no-repeat;
+  padding-top: 6.6rem;
+  padding-bottom: 8rem;
+
+  @media @tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .intro__content {
@@ -19,6 +19,10 @@
   font-weight: 200;
   font-size: 2.13rem;
   color: @black;
+
+  @media @tablet {
+    font-size: 1.5rem;
+  }
 }
 
 .intro__title {
@@ -26,6 +30,10 @@
   font-size: 3rem;
   color: @black;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 2rem;
+  }
 }
 
 .intro__text {
@@ -39,5 +47,9 @@
   bottom: -1px;
   right: 0;
   z-index: 1;
+
+  @media @tablet {
+    width: 350px;
+  }
 }
 
