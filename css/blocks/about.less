@@ -4,11 +4,21 @@
 
 .about__inner {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1090px;
 }
 
 .about__photo {
+  position: relative;
   width: 50%;
+
+  @media @tablet {
+    order: 2;
+
+    img {
+      margin: auto;
+    }
+  }
 
   img {
     z-index: 1;
@@ -20,6 +30,18 @@
 
   padding-left: 3.2rem;
   margin-top: 2rem;
+
+  @media @tablet {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+.about__content,
+.about__photo {
+  @media @tablet {
+    width: 100%;
+  }
 }
 
 .about__title {
@@ -27,6 +49,10 @@
   color: @black;
   font-size: 3rem;
   font-weight: 700;
+
+  @media @notebook {
+    font-size: 2.5rem;
+  }
 }
 
 .about__bigtitle {
@@ -40,6 +66,10 @@
   margin-bottom: 1.4rem;
 
   font-size: 6.10rem;
+
+  @media @notebook {
+    font-size: 4rem;
+  }
 }
 
 .about_text {
