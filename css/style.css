@@ -171,6 +171,18 @@ p {
 }
 .header {
   padding: 1.2rem 0;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .header {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
 }
 .header__inner {
   display: flex;
@@ -203,12 +215,26 @@ p {
 }
 .nav {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   align-items: center;
 }
 @media (max-width: 767px) {
   .nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10000;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  .nav.show {
+    display: flex;
   }
 }
 .nav__link {
@@ -244,6 +270,19 @@ p {
   background-color: #2B2A2C;
   color: #fff;
 }
+@media (max-width: 767px) {
+  .nav__link {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+}
+@media (max-width: 1199px) {
+  .intro {
+    margin-top: 100px;
+  }
+}
 .intro__inner {
   position: relative;
   display: flex;
@@ -259,6 +298,11 @@ p {
 }
 .intro__content {
   width: 50%;
+}
+@media (max-width: 767px) {
+  .intro__content {
+    width: 60%;
+  }
 }
 @media (max-width: 565px) {
   .intro__content {
@@ -300,6 +344,11 @@ p {
 @media (max-width: 991px) {
   .intro__photo {
     width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .intro__photo {
+    width: 300px;
   }
 }
 @media (max-width: 565px) {
@@ -370,6 +419,16 @@ p {
     min-width: 140px;
   }
 }
+@media (max-width: 565px) {
+  .btn {
+    display: block;
+    width: 100%;
+  }
+  .btn + .btn {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
 .works {
   margin: 3.8rem 0;
 }
@@ -416,6 +475,16 @@ p {
 .work:hover {
   box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 767px) {
+  .work {
+    max-width: 370px;
+  }
+}
+@media (max-width: 565px) {
+  .work {
+    margin: 0 auto;
+  }
+}
 .work__image {
   display: block;
   max-width: 100%;
@@ -441,6 +510,11 @@ p {
 .about {
   margin: 8.4rem 0;
 }
+@media (max-width: 991px) {
+  .about {
+    margin: 4rem 0;
+  }
+}
 .about__inner {
   display: flex;
   flex-wrap: wrap;
@@ -455,7 +529,7 @@ p {
     order: 2;
   }
   .about__photo img {
-    margin: auto;
+    margin: 0 auto;
   }
 }
 .about__photo img {
@@ -469,7 +543,10 @@ p {
 @media (max-width: 991px) {
   .about__content {
     order: 1;
-    margin-bottom: 2rem;
+    padding-left: 0;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
   }
 }
 @media (max-width: 991px) {
@@ -489,6 +566,11 @@ p {
     font-size: 2.5rem;
   }
 }
+@media (max-width: 767px) {
+  .about__title {
+    font-size: 2rem;
+  }
+}
 .about__bigtitle {
   position: relative;
   left: -10px;
@@ -503,6 +585,16 @@ p {
 @media (max-width: 1199px) {
   .about__bigtitle {
     font-size: 4rem;
+  }
+}
+@media (max-width: 991px) {
+  .about__bigtitle {
+    position: static;
+  }
+}
+@media (max-width: 767px) {
+  .about__bigtitle {
+    font-size: 3rem;
   }
 }
 .about_text {
@@ -567,6 +659,12 @@ p {
   margin-top: 14rem;
   margin-bottom: 8rem;
 }
+@media (max-width: 991px) {
+  .news {
+    margin-top: 12rem;
+    margin-bottom: 5rem;
+  }
+}
 .news__header {
   text-align: center;
 }
@@ -576,6 +674,11 @@ p {
   color: #2B2A2C;
   font-weight: 700;
   margin-bottom: 0.3rem;
+}
+@media (max-width: 767px) {
+  .news__title {
+    font-size: 2rem;
+  }
 }
 .news__text {
   font-size: 1.2rem;
@@ -602,13 +705,19 @@ p {
   width: 33.3333%;
   padding: 0 1rem;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .articles__col {
     width: 100%;
   }
 }
 .articles__item {
   margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .articles__item {
+    max-width: 370px;
+    margin: 0 auto 2rem auto;
+  }
 }
 .articles__header {
   position: relative;
@@ -757,7 +866,6 @@ p {
     margin: 0 0.5rem 0.5rem 0.5rem;
   }
 }
-/* 32 минуты */
 .modal {
   display: none;
   width: 100%;
@@ -1062,7 +1170,16 @@ p {
 .burger {
   width: 30px;
   height: 30px;
+  padding: 0;
+  border: 0;
+  background: none;
   display: none;
+}
+.burger:focus {
+  outline: none;
+}
+.burger:hover {
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .burger {

@@ -1,10 +1,26 @@
 .nav {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   align-items: center;
 
   @media @mobile {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10000;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+
+    background-color: #fff;
+    text-align: center;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    &.show {
+      display: flex;
+    }
   }
 }
 
@@ -47,5 +63,12 @@
       background-color: @black;
       color: @white;
     }
+  }
+
+  @media @mobile {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 1rem;
   }
 }

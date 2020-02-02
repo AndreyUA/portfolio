@@ -109,6 +109,16 @@ $(function () {
         currentSlider.slick('slickNext');
     });
 
+    /* BURGER */
+    const navToggle = $('#navToggle');
+    const nav = $('#nav');
+
+    navToggle.on('click', function (e) {
+        e.preventDefault();
+
+        nav.toggleClass('show');
+    })
+
 });
 
 

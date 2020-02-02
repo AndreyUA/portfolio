@@ -2,7 +2,19 @@
   width: 30px;
   height: 30px;
 
+  padding: 0;
+  border: 0;
+  background: none;
+
   display: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media @mobile {
     display: block;
